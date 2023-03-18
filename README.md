@@ -9,7 +9,7 @@ This is a microservice for managing user wallets, implemented using PHP/Laravel 
 2) Build and start the Docker containers:
  `docker-compose up -d --build`
 
-3) Run the database migrations: `docker-compose exec app php artisan migrate`
+3) Run the database migrations and seeders: `docker-compose exec app php artisan migrate --seed`
 
 4) The available API endpoints are:
 
