@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    app:
+        build:
+            context: .
+        restart: always
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/app
+        environment:
+            - DB_HOST=db
+            - DB_PORT=3306
+            - DB_DATABASE=wallet-service
+            - DB_USERNAME=root
+            - DB_PASSWORD=secret
+    db:
+        image: mysql:5.7
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+            - MYSQL_DATABASE=wallet-service
+        volumes:
+            - db-data:/var/lib/mysql
+
+volumes:
+    db-data:
