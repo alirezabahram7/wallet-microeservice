@@ -6,7 +6,8 @@ services:
             context: .
         restart: always
         ports:
-            - "8000:80"
+            - "8000:8000"
+        command: 'php artisan serve --host=0.0.0.0'
         volumes:
             - .:/app
         environment:
