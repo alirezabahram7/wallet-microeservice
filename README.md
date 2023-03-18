@@ -21,6 +21,6 @@ This is a microservice for managing user wallets, implemented using PHP/Laravel 
 `docker-compose exec app php artisan test`
 
 6) To run the daily job that calculates the total amount of transactions, run the following command:
-`docker-compose exec app php artisan calculate-total-amount`
+`docker-compose exec app php artisan calculate:total-amount`
 
 
